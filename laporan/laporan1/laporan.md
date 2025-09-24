@@ -16,14 +16,47 @@ Tujuan dari laporan ini adalah untuk mendokumentasikan implementasi kode, mengan
 
 ## 2. Praktikum
 
-### 2.1 Praktikum 1 - Variabel dan Tipe Data
+#### 2.1 Praktikum 1 - Variabel dan Tipe Data
 
 #### Dasar Teori
+
 Java memiliki dua kategori utama tipe data: **primitif** dan **referensi**.
+
 - **Tipe data primitif**: menyimpan nilai tunggal sederhana, seperti `int`, `double`, `char`, `boolean`.
 - **Tipe data referensi**: seperti `String`, yang merujuk pada sebuah objek di memori.
 
-Aturan penamaan variabel: tidak diawali angka, case-sensitive, dan tidak menggunakan keyword bawaan Java.
+---
+
+#### Tipe Data Primitif
+
+- **byte**: 8-bit signed integer (`-128` to `127`)
+- **short**: 16-bit signed integer (`-32,768` to `32,767`)
+- **int**: 32-bit signed integer (`-2,147,483,648` to `2,147,483,647`)
+- **long**: 64-bit signed integer
+- **float**: 32-bit IEEE 754 floating point
+- **double**: 64-bit IEEE 754 floating point
+- **boolean**: hanya bernilai `true` atau `false`
+- **char**: 16-bit Unicode character
+
+---
+
+#### Tipe Data Referensi
+
+- **String**
+- **Array**
+- **Object**
+- dan lain-lain
+
+---
+
+#### Aturan Penamaan Variabel
+
+- Dimulai dengan **huruf**, **underscore (`_`)**, atau **dollar sign (`$`)**
+- Tidak boleh dimulai dengan angka
+- **Case-sensitive** (huruf besar dan kecil dibedakan)
+- Tidak boleh menggunakan **keyword bawaan Java**
+
+---
 
 #### Langkah Praktikum
 1. Membuat file baru dengan nama `VariableDemo.java` di dalam package `modul_2`.
@@ -76,7 +109,6 @@ String nama = "John Doe";
 
 #### Screenshoot Hasil
 ![Hasil VariableDemo](gambar/variable_demo.png)
-<!-- Simpan screenshot program VariableDemo.java di folder img dengan nama variable_demo.png -->
 
 #### Analisa dan Pembahasan
 Program ini menunjukkan cara deklarasi variabel, operasi aritmatika dasar, explicit casting (`double → int`), dan automatic promotion (`byte + short → int`).
@@ -86,9 +118,25 @@ Program ini menunjukkan cara deklarasi variabel, operasi aritmatika dasar, expli
 ### 2.2 Praktikum 2 - Input, Output, dan Scanner
 
 #### Dasar Teori
-- **Output**: `System.out.println()` digunakan untuk menampilkan teks ke konsol.
-- **Input**: kelas `Scanner` dari `java.util` digunakan untuk membaca input pengguna (`nextLine()`, `nextInt()`, `nextDouble()`).
+#### Input dan Output pada Java
 
+#### Output
+- **`System.out.println()`**  
+  Digunakan untuk menampilkan teks atau nilai ke konsol dengan baris baru di akhir.
+- **`System.out.print()`**  
+  Menampilkan teks tanpa baris baru di akhir.
+- **`System.out.printf()`**  
+  Menampilkan teks dengan format tertentu (misalnya untuk angka desimal, persen, dll).
+
+#### Input
+Untuk membaca input dari pengguna, Java menggunakan kelas **`Scanner`** yang terdapat dalam package `java.util`.  
+Scanner menyediakan berbagai method untuk membaca berbagai tipe data:
+
+- **`nextInt()`** → membaca **integer**
+- **`nextDouble()`** → membaca **double**
+- **`nextLine()`** → membaca **String** (termasuk spasi)
+- **`next()`** → membaca **String** (hanya sampai spasi pertama)
+- **`nextBoolean()`** → membaca **boolean** (`true` / `false`)
 #### Langkah Praktikum
 1. Membuat file baru `InputOutputDemo.java`.
 2. Program meminta input nama, umur, tinggi, lalu menampilkannya kembali.
@@ -132,7 +180,7 @@ Scanner input = new Scanner(System.in);
 
 #### Screenshoot Hasil
 ![Hasil InputOutputDemo](gambar/input_output_demo.png)
-<!-- Simpan screenshot program InputOutputDemo.java di folder img dengan nama input_output_demo.png -->
+
 
 #### Analisa dan Pembahasan
 Program berhasil membaca input pengguna dan menampilkannya kembali. Metode `close()` digunakan untuk menutup `Scanner`.
@@ -141,10 +189,57 @@ Program berhasil membaca input pengguna dan menampilkannya kembali. Metode `clos
 
 ### 2.3 Praktikum 3 - Struktur Kontrol: Percabangan
 
+#### Dasar Teori
+
+#### Struktur Kontrol Percabangan
+
+Struktur kontrol percabangan digunakan untuk membuat **keputusan** dalam program. Java menyediakan beberapa bentuk statement percabangan:
+
+#### 1. If Statement
+```java
+if (kondisi) {
+        // kode yang dijalankan jika kondisi true
+        }
+```
+#### 2. If-Else Statement
+```java
+if (kondisi) {
+    // kode jika kondisi true
+} else {
+    // kode jika kondisi false
+}
+```
+#### 3. If-Else If-Else Statement
+```java
+if (kondisi1) {
+    // kode jika kondisi1 true
+} else if (kondisi2) {
+    // kode jika kondisi2 true
+} else {
+    // kode jika semua kondisi false
+}
+```
+#### 4. Switch Statement
+```java
+switch (variabel) {
+    case nilai1:
+        // kode
+        break;
+    case nilai2:
+        // kode
+        break;
+    default:
+        // kode default
+}
+```
+#### Langkah Praktikum
+#### Langkah 1: Program Penentu Grade
+
+1. Buat file baru dengan nama GradeDemo.java
+2. Implementasikan kode berikut:
+
 #### Implementasi
 1. **GradeDemo.java** → konversi nilai angka ke huruf.
-2. **MenuDemo.java** → menu interaktif dengan `switch`.
-3. **NestedIfDemo.java** → menentukan kategori usia + izin mengemudi.
 
 Kode GradeDemo.java
 
@@ -190,6 +285,17 @@ public class GradeDemo {
     }
 }
 ````
+#### Screenshoot Hasil
+![Hasil GradeDemo](gambar/grade_demo.png)
+
+#### Langkah 2: Program Menu dengan Switch
+
+1. Buat file baru dengan nama MenuDemo.java
+2. Implementasikan kode berikut:
+
+#### Implementasi
+2. **MenuDemo.java** → menu interaktif dengan `switch`.
+
 Kode menudemo.java
 ````Java
 package modul_2;
@@ -246,6 +352,16 @@ public class MenuDemo {
 }
 
 ````
+#### Screenshoot Hasil
+![Hasil MenuDemo](gambar/menu_demo.png)
+#### Langkah 3: Program Nested If
+
+1. Buat file baru dengan nama NestedIfDemo.java
+2. Implementasikan program untuk menentukan kategori usia:
+
+#### Implementasi
+3. **NestedIfDemo.java** → menentukan kategori usia
+
 Kode nestedifdemo.java
 ````Java
 package modul_2;
@@ -284,11 +400,9 @@ public class NestedIfDemo {
 ````
 
 #### Screenshoot Hasil
-![Hasil GradeDemo](gambar/grade_demo.png)  
-![Hasil MenuDemo](gambar/menu_demo.png)  
 ![Hasil NestedIfDemo](gambar/nestedifdemo.png)
 
-<!-- Simpan screenshot program GradeDemo.java, MenuDemo.java, NestedIfDemo.java di folder img -->
+
 
 #### Analisa dan Pembahasan
 - `if-else`: memetakan nilai angka ke grade.
@@ -299,10 +413,39 @@ public class NestedIfDemo {
 
 ### 2.4 Praktikum 4 - Struktur Kontrol: Perulangan
 
+#### Dasar Teori
+
+#### Struktur Perulangan (Loop)
+
+Perulangan (**loop**) digunakan untuk mengulang eksekusi kode tertentu. Java menyediakan tiga jenis perulangan utama:
+
+#### 1. For Loop
+```java
+for (inisialisasi; kondisi; increment/decrement) {
+        // kode yang diulang
+        }
+```
+```java
+while (kondisi) {
+    // kode yang diulang
+}
+
+```
+```java
+do {
+    // kode yang diulang
+} while (kondisi);
+
+```
+#### Langkah Praktikum
+#### Langkah 1: Perulangan For
+
+1. buat file baru dengan nama ForLoopDemo.java
+2. Implementasikan berbagai contoh for loop:
+
+
 #### Implementasi
 1. **ForLoopDemo.java** → deret angka, countdown, tabel perkalian.
-2. **WhileLoopDemo.java** → game tebak angka + menu interaktif.
-3. **NestedLoopDemo.java** → pola bintang, tabel perkalian, pola angka.
 
 Kode lengkap ForLoopDemo.java
 ````java
@@ -339,6 +482,18 @@ public class ForLoopDemo {
     }
 }
 ````
+#### Screenshoot Hasil
+![Hasil ForLoopDemo](gambar/forloopdemo.png)  
+
+#### Langkah 2: Perulangan While dan Do-While
+
+1. Buat file baru dengan nama WhileLoopDemo.java
+2. Implementasikan contoh while dan do-while:
+
+
+#### Implementasi
+2. **WhileLoopDemo.java** → game tebak angka + menu interaktif.
+
 Kode lengkap WhileLoopDemo.java
 ````java
 package modul_2;
@@ -397,6 +552,18 @@ public class WhileLoopDemo {
 }
 
 ````
+#### Screenshoot Hasil
+![Hasil WhileLoopDemo](gambar/whileloopdemo.png)  
+
+#### Langkah 3: Nested Loop (Perulangan Bersarang)
+
+1. Buat file baru dengan nama NestedLoopDemo.java
+2. Implementasikan contoh nested loop:
+
+
+#### Implementasi
+3. **NestedLoopDemo.java** → pola bintang, tabel perkalian, pola angka.
+
 Kode lengkap NestedLoopDemo.java
 ````java
 package modul_2;
@@ -435,11 +602,9 @@ public class NestedLoopDemo {
 
 
 #### Screenshoot Hasil
-![Hasil ForLoopDemo](gambar/forloopdemo.png)  
-![Hasil WhileLoopDemo](gambar/whileloopdemo.png)  
 ![Hasil NestedLoopDemo](gambar/nestedloopdemo.png)
 
-<!-- Simpan screenshot program ForLoopDemo.java, WhileLoopDemo.java, NestedLoopDemo.java di folder img -->
+
 
 #### Analisa dan Pembahasan
 - **for**: fleksibel (increment, decrement, step khusus).
