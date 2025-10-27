@@ -6,7 +6,7 @@ public class KartuRencanaStudi {
     private Matakuliah[] daftarMatakuliah;
     private int jumlahMatkul;
     private int maxMatkul;
-    // MODIFIKASI: Tambahkan konstanta untuk batas maksimal SKS
+   
     private static final int MAX_SKS = 24;
 
     public KartuRencanaStudi(Mahasiswa mahasiswa, int maxMatkul) {
@@ -16,7 +16,7 @@ public class KartuRencanaStudi {
         this.jumlahMatkul = 0;
     }
 
-    // MODIFIKASI: Method tambahMatakuliah divalidasi dengan batas SKS
+    
     public boolean tambahMatakuliah(Matakuliah matkul) {
         if (jumlahMatkul >= maxMatkul) {
             System.out.println("\n[GAGAL] Note: KRS sudah penuh! Maksimal " + maxMatkul + " mata kuliah.");
@@ -34,7 +34,7 @@ public class KartuRencanaStudi {
         return true;
     }
 
-    // MODIFIKASI: Method baru untuk menghapus mata kuliah
+  
     public boolean hapusMatakuliah(String kode) {
         int indexHapus = -1;
         for (int i = 0; i < jumlahMatkul; i++) {

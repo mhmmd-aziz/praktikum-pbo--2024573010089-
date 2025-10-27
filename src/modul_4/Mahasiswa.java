@@ -7,9 +7,9 @@ public class Mahasiswa {
     private String jurusan;
 
     // Constructor dengan parameter
-    public Mahasiswa(String nama, String npm, String jurusan, double ipk) {
+    public Mahasiswa(String nama, String nim, String jurusan, double ipk) {
         this.nama = nama;
-        this.nim = npm; // Sepertinya ada typo di gambar, seharusnya nim
+        this.nim = nim; // Sepertinya ada typo di gambar, seharusnya nim
         this.jurusan = jurusan;
     }
 

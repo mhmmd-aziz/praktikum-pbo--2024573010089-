@@ -19,7 +19,7 @@ public class Main {
         String jurusan = input.nextLine();
 
         Mahasiswa mhs = new Mahasiswa(nama, nim, jurusan, 0.0);
-        KartuRencanaStudi krs = new KartuRencanaStudi(mhs, 10);
+        person krs = new person(mhs, 10);
 
         boolean running = true;
         while (running) {
