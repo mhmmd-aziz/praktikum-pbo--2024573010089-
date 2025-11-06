@@ -1,7 +1,7 @@
 package modul_4;
 
-// Simpan sebagai Main.java
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Main {
         String jurusan = input.nextLine();
 
         Mahasiswa mhs = new Mahasiswa(nama, nim, jurusan, 0.0);
-        person krs = new person(mhs, 10);
+        KartuRencanaStudi krs = new KartuRencanaStudi(mhs, 10);
 
         boolean running = true;
         while (running) {
