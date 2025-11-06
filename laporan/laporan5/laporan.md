@@ -220,7 +220,7 @@ public class Person {
 ```java
 package modul_6.praktikum_1;
 
-public class Student extends Person {
+public class Student extends OverloadingTest {
     // Variabel privat untuk menyimpan ID mahasiswa
     private String studentId;
 
@@ -264,7 +264,7 @@ public class InheritanceTest {
         student.greet();
 
         // Polymorphism: objek Student diperlakukan sebagai Person
-        Person person = new Student("Bob", 22, "S67890");
+        OverloadingTest person = new Student("Bob", 22, "S67890");
         person.greet(); // Tetap memanggil versi yang di-override di Student
     }
 }
@@ -395,7 +395,7 @@ package modul_6.praktikum_2;
 public class OverrideTest {
     public static void main(String[] args) {
         // Membuat objek Car dan memanggil metode-metodenya
-        Car car = new Car("Toyota", 180, 4);
+        Shape car = new Shape("Toyota", 180, 4);
 
         // Memanggil method yang di-override dari Vehicle
         car.start();
@@ -405,7 +405,7 @@ public class OverrideTest {
         car.honk();
 
         // Demonstrasi polymorphism: objek Car disimpan sebagai Vehicle
-        Vehicle vehicle = new Car("Honda", 200, 2);
+        Vehicle vehicle = new Shape("Honda", 200, 2);
 
         // Tetap memanggil versi method yang di-override di Car
         vehicle.start();
