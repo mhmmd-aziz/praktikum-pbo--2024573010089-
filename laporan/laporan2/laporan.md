@@ -1640,9 +1640,7 @@ Keduanya mengimplementasikan konsep penting dalam **String Manipulation** sepert
 Dengan memahami metode-metode seperti `split()`, `trim()`, `toLowerCase()`, dan regex, mahasiswa dapat mengolah data teks dengan lebih efektif dan profesional.
 
 ---
----
 
-Tentu, berikut adalah bagian Kesimpulan dan Referensi yang telah dilengkapi dan diformat dalam Markdown berdasarkan laporan praktikum yang Anda berikan.
 
 ***
 

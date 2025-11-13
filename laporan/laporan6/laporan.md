@@ -147,7 +147,6 @@ public class OverloadingTest {
 
 ![Hasil Praktikum 1 ](gambar/gambar1.png)
 
-Tentu, berikut adalah bagian Analisis dan Pembahasan untuk kedua praktikum tersebut, yang ditulis dalam format Markdown.
 
 ---
 
@@ -405,7 +404,18 @@ Dalam praktikum ini, `instanceof` digunakan untuk mengonfirmasi tipe objek sebel
 
 ## 5\. Kesimpulan
 
-[TODO: Tulis kesimpulan Anda di sini. Rangkum apa yang telah dipelajari tentang Polymorphism. Jelaskan perbedaan utama antara Overloading (Compile-time) dan Overriding (Runtime). Terangkan bagaimana Polymorphism (khususnya overriding) memungkinkan penulisan kode yang lebih fleksibel, modular, dan mudah diperluas, seperti yang ditunjukkan pada Praktikum 2.]
+
+Berdasarkan praktikum yang telah dilaksanakan, dapat ditarik beberapa kesimpulan mengenai konsep Polymorphism dalam Pemrograman Berorientasi Objek (OOP):
+
+1.  **Polymorphism Terbukti:** Modul ini berhasil mendemonstrasikan dua jenis utama polymorphism di Java. Keduanya memungkinkan sebuah *interface* (nama method) untuk digunakan pada berbagai bentuk (implementasi atau tipe data yang berbeda).
+
+2.  **Compile-time (Overloading):** Praktikum 1 (class `Calculator`) membuktikan **Compile-time Polymorphism** atau **Method Overloading**. Terbukti bahwa *compiler* Java dapat membedakan method dengan nama yang sama (`add`) selama *method signature* (jumlah, tipe, atau urutan parameter) berbeda. Keputusan method mana yang akan dieksekusi ditentukan sepenuhnya pada saat **kompilasi**.
+
+3.  **Runtime (Overriding):** Praktikum 2 (class `Shape` dan turunannya) membuktikan **Runtime Polymorphism** atau **Method Overriding**. Melalui mekanisme *inheritance*, *subclass* (`Circle`, `Rectangle`, `Triangle`) menyediakan implementasi spesifik untuk method yang ada di *superclass* (`draw`, `calculateArea`).
+
+4.  **Dynamic Method Dispatch:** Poin kunci dari Praktikum 2 adalah demonstrasi **Dynamic Method Dispatch**. Ketika sebuah method dipanggil melalui referensi *superclass* (misalnya, `Shape shape = new Circle(); shape.draw();`), Java Virtual Machine (JVM) akan menentukan implementasi method mana yang akan dijalankan pada saat **runtime**, berdasarkan **tipe objek aktual** (yaitu `Circle`), bukan tipe referensi (`Shape`).
+
+5.  **Fleksibilitas Kode:** Penggunaan polymorphism, khususnya *overriding*, terbukti menghasilkan kode yang jauh lebih fleksibel dan mudah dikelola. Hal ini terlihat pada `PolymorphismTest`, di mana satu *loop* `for` dapat memproses berbagai jenis objek `Shape` secara seragam, namun setiap objek tetap menjalankan perilakunya yang unik.
 
 ## 6\. Referensi
 
