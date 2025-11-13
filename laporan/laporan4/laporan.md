@@ -1,7 +1,3 @@
-Tentu, berikut adalah draf laporan lengkap untuk Modul 5 berdasarkan struktur yang Anda minta, dengan detail yang diperluas untuk setiap bagian praktikum.
-
------
-
 # Laporan Modul 5: Enkapsulasi
 
 **Mata Kuliah:** Praktikum Pemrograman Berorientasi Objek  

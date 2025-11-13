@@ -1,14 +1,8 @@
-Tentu, ini adalah draf laporan untuk Modul 6, yang diformat persis seperti file `laporan.md` (Modul 5) yang Anda berikan, menggunakan konten dari teks Modul 6 Anda.
-
-Saya telah menyusunnya sebagai templat laporan lengkap. Anda hanya perlu **mengisi bagian kode yang kosong** (yang telah saya tandai dengan `TODO`) dan **menambahkan analisis Anda** di bagian "Analisis dan Pembahasan".
-
------
-
 # Laporan Modul 6: Inheritance
 
-**Mata Kuliah:** Praktikum Pemrograman Berorientasi Objek
-**Nama:** Muhammad Aziz
-**NIM:** 2024573010089
+**Mata Kuliah:** Praktikum Pemrograman Berorientasi Objek  
+**Nama:** Muhammad Aziz  
+**NIM:** 2024573010089  
 **Kelas:** TI 2E
 
 -----
